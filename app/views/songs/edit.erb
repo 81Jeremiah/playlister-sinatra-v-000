@@ -16,7 +16,7 @@
 
   <p>Change the song's genre(s)</p>
     <% Genre.all.each do |genre| %>
-      <br><input id="<%= genre.name %>" type="checkbox" name="[song]genres[]" value="<%= genre.id %>"<%='checked' if @song.genres.include?(genre) %></input><%= genre.name %></input></br>
+      <br><input id="<%= genre.name %>" type="checkbox" name="genres[]" value="<%= genre.id %>"<%='checked' if @song.genres.include?(genre) %></br>
     <% end %>
 
   <input type="submit" value="Save">
