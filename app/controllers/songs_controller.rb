@@ -25,4 +25,8 @@ use Rack::Flash
     flash[:message] = "Successfully created song."
     redirect to "/songs/#{@song.slug}"
   end
+
+   get '/songs/:slug/edit' do 
+
+   end 
 end
