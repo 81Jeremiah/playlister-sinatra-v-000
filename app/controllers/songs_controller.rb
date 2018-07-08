@@ -41,4 +41,9 @@ use Rack::Flash
     redirect to "/songs/#{song.slug}"
  end
 
+  delete '/songs/:slug/delete' do
+    song = Song.find_by_slug(params[:slug])
+    song.delete
+  end
+
 end
