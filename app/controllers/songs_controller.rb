@@ -6,7 +6,7 @@ class SongsController < ApplicationController
   end
 
   get '/songs/new' do
-    puts params
+    raise params
     erb :'songs/new'
   end
 
