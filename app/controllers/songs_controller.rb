@@ -32,7 +32,6 @@ use Rack::Flash
    end
 
   patch '/songs/:slug' do
-    "hello world"
     @song = Song.find_by_slug(params[:slug])
     @artist = Artist.find_or_create_by(name: params[:artist_name]) if !params[:artist_name].empty?
     @genre_ids = params[:genre_ids].collect(&:to_i)
