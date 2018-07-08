@@ -36,8 +36,9 @@ use Rack::Flash
     @artist = Artist.find_or_create_by(name: params[:artist_name]) if !params[:artist_name].empty?
     @genre_ids = params[:genre_ids].collect(&:to_i)
     @song.update(artist: @artist, genre_ids: @genre_ids)
+    binding.pry
     flash[:message] = "Successfully updated song."
-    
+
     redirect to "/songs/#{@song.slug}"
  end
 
