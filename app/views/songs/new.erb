@@ -15,7 +15,7 @@
 
   <p>What is your song's genre(s)?</p>
     <% Genre.all.each do |genre| %>
-      <input id="<%= genre.name %>" type="checkbox" name="genres[]" value="<%= genre.id %>"><%= genre.name %></input><br>
+      <br><input id="<%= genre.name %>" type="checkbox" name="genres[]" value="<%= genre.id %>"><%= genre.name %></input></br>
     <% end %>
 
   <input type="submit" value="Create a Song">
