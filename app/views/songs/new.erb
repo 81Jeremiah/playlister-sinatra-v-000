@@ -1,6 +1,6 @@
 <h1>Create a new Song </h1>
-<% if flash.has?(:notice) %>
-  <%= flash[:notice] %>
+<% if flash.has?(:message) %>
+  <%= flash[:message] %>
 <% end %>
 <form action="/songs" method="POST">
   <label for="song_name">Name</label>
