@@ -1,11 +1,10 @@
-<h1>Individual Genre Page</h1>
-<h3>Genre: <%= @genre.name %><h3>
+<h1>Genre: <%= @genre.name %><h1>
 
-<h3>Artists: <% @genre.artists.each do |artist| %>
+<h3>Artists with <%= @genre.name %> music: <% @genre.artists.each do |artist| %>
     <a href="/artists/<%=artist.slug%>"><%= artist.name %></a><h3>
     <%end%>
 <h3>Songs:  <% @genre.songs.each do |song| %>
    <a href="/songs/<%=song.slug%>"><%=song.name%></a>
    <%end%>
 
-<h5><a href="/songs">Return to all Songs</a><h5>  
+<h5><a href="/songs">Return to all Songs</a><h5>
